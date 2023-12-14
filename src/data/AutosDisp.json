@@ -1,0 +1,12 @@
+[
+    {"id":1,"car_make":"Honda","car_model":"Odyssey","car_year":1996,"estado":true, "thumbnail": "https://static.carfromjapan.com/spec_7fe6dbd0-3a6f-41ce-91a5-fe4b0ff7d33b_640_0"},
+    {"id":2,"car_make":"Ford","car_model":"F250","car_year":2001,"estado":false, "thumbnail": "https://www.cars.com/i/large/in/v2/stock_photos/1e477280-596a-403c-aa9e-a22be244a6e8/a664d987-bbce-4136-960a-5aa875291aa0.png"},
+    {"id":3,"car_make":"Suzuki","car_model":"Grand Vitara","car_year":2007,"estado":false, "thumbnail": "https://www.cars.com/i/large/in/v2/stock_photos/bafd2453-fe24-4461-820a-15131adbc633/8ee020f2-f557-4366-8f42-290497ed0a5b.png"},
+    {"id":4,"car_make":"Ford","car_model":"Falcon","car_year":1967,"estado":true, "thumbnail": "https://www.veoautos.cl/wp-content/uploads/2022/09/FORD-FALCONFUTURA-COUPE-1967.jpg"},
+    {"id":5,"car_make":"Audi","car_model":"S4","car_year":1993,"estado":true, "thumbnail": "https://turtlegarage.com/wp-content/uploads/2018/12/1993_audi_s4_1543515529f941082IMG_5183-940x613.jpg"},
+    {"id":6,"car_make":"Chevrolet","car_model":"Express 2500","car_year":2004,"estado":true, "thumbnail": "https://www.cars.com/i/large/in/v2/stock_photos/6182f50c-3aae-498b-8701-99f270eaf804/9e283d4f-6077-49d6-89a6-35c44d6c8cf5.png"},
+    {"id":7,"car_make":"Kia","car_model":"Sportage","car_year":2012,"estado":true, "thumbnail": "https://autolab.com.co/wp-content/uploads/2022/04/sportge.png"},
+    {"id":8,"car_make":"Jeep","car_model":"Wrangler","car_year":2008,"estado":false, "thumbnail": "https://www.cars.com/i/large/in/v2/stock_photos/9dd86a98-d209-487e-96bc-1d98b9321d02/ef4380e8-643a-44e1-ac45-ce02f26afda7.png"},
+    {"id":9,"car_make":"Buick","car_model":"Park Avenue","car_year":2001,"estado":false, "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/1/16/2001_Buick_Park_Avenue.jpg"},
+    {"id":10,"car_make":"Oldsmobile","car_model":"Ciera","car_year":1996,"estado":true, "thumbnail": "https://www.cars.com/i/large/in/v2/stock_photos/9b78389a-b28a-44be-80ec-ee5852d18308/84d73911-cfde-4240-81ad-0ab06828a9fe.png"}
+]

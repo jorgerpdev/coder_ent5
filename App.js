@@ -1,12 +1,39 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
+import { useFonts } from 'expo-font';
+import CarsScreen from './src/screens/CarsScreen';
+import { useState } from 'react';
+import CarDetailScreen from './src/screens/CarDetailScreen';
 
 export default function App() {
+  const [carSelected, setCarSelected] = useState(0)
+
+  const [fontsLoaded] = useFonts({
+    'FiraCode-Regular': require('./assets/fonts/FiraCode-Regular.ttf'),
+    'FiraCode-Bold': require('./assets/fonts/FiraCode-Bold.ttf'),
+  });
+
+
+  const onSelectCarEvent = (carId) => (
+    setCarSelected(carId)
+  )
+
+  const setCarSelectedTo0 = () => (
+    setCarSelected(0)
+  )
+
+  if(!fontsLoaded) return <ActivityIndicator/>
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+    {carSelected != 0 ? 
+      <CarDetailScreen carId={carSelected} setCarSelectedTo0={setCarSelectedTo0}/>
+      :
+      <CarsScreen onSelectCarEvent={onSelectCarEvent} setCarSelectedTo0={setCarSelectedTo0}/>
+    }
+
+    </>
+    
   );
 }
 
