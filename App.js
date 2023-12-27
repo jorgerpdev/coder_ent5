@@ -1,9 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, ActivityIndicator } from 'react-native';
 import { useFonts } from 'expo-font';
-import CarsScreen from './src/screens/CarsScreen';
 import { useState } from 'react';
-import CarDetailScreen from './src/screens/CarDetailScreen';
+//import CarsScreen from './src/screens/CarsScreen';
+//import CarDetailScreen from './src/screens/CarDetailScreen';
+import Navigator from './src/navigation/Navigator';
 
 export default function App() {
   const [carSelected, setCarSelected] = useState(0)
@@ -25,14 +26,15 @@ export default function App() {
   if(!fontsLoaded) return <ActivityIndicator/>
 
   return (
-    <>
-    {carSelected != 0 ? 
-      <CarDetailScreen carId={carSelected} setCarSelectedTo0={setCarSelectedTo0}/>
-      :
-      <CarsScreen onSelectCarEvent={onSelectCarEvent} setCarSelectedTo0={setCarSelectedTo0}/>
-    }
+    <Navigator/>
+    // <>
+    // {carSelected != 0 ? 
+    //   <CarDetailScreen carId={carSelected} setCarSelectedTo0={setCarSelectedTo0}/>
+    //   :
+    //   <CarsScreen onSelectCarEvent={onSelectCarEvent} setCarSelectedTo0={setCarSelectedTo0}/>
+    // }
 
-    </>
+    // </>
     
   );
 }

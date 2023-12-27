@@ -2,11 +2,13 @@ import { StyleSheet, Text, View, Image } from 'react-native'
 import { useState, useEffect } from 'react'
 import AutosDisp from '../data/AutosDisp.json'
 import Card from '../components/Card'
-import Header from '../components/Header'
+//import Header from '../components/Header'
 import {colors} from '../global/colors.js'
 
-const CarDetailScreen = ({carId, setCarSelectedTo0}) => {
+const CarDetailScreen = ({navigation, route, setCarSelectedTo0}) => { //carId
     const [carDetail, setCarDetail] = useState({})
+
+    var carId = route.params;
 
     useEffect(() =>{
         const carItem = AutosDisp.find((car) => car.id === carId)
@@ -15,7 +17,7 @@ const CarDetailScreen = ({carId, setCarSelectedTo0}) => {
 
     return (
         <>
-            <Header title={carDetail.car_model} homeButt={true} setCarSelectedTo0={setCarSelectedTo0}/>
+            {/* <Header title={carDetail.car_model} homeButt={true} setCarSelectedTo0={setCarSelectedTo0}/> */}
             <Card style={styles.cardContainer}>
             <Text style={styles.text}>{carDetail.car_make} - {carDetail.car_model}, año: {carDetail.car_year}</Text>
                     <Image 

@@ -3,10 +3,12 @@ import Card from './Card'
 import {colors} from '../global/colors.js'
 import React from 'react'
 
-const CarItem = ({carObj, onSelectCarEvent}) => {
+const CarItem = ({carObj, navigation}) => {
+    //carObj.id
 
+    //var idd = carObj.id;
     return (
-        <TouchableOpacity onPress={() => onSelectCarEvent(carObj.id)}>
+        <TouchableOpacity onPress={() => navigation.navigate("Movil_Detalle", carObj.id)}>
             <Card style={styles.cardContainer}>
                 <Text style={styles.text}>{carObj.car_make} - {carObj.car_model}, año: {carObj.car_year}</Text>
                 <View>

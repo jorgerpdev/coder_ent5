@@ -1,13 +1,16 @@
-import { StyleSheet, Text, View, Button } from 'react-native'
+import { StyleSheet, Text, View, Button,TouchableOpacity } from 'react-native'
 import {colors} from '../global/colors.js'
 
-const Header = ({title, homeButt, setCarSelectedTo0}) => {
+import { AntDesign } from '@expo/vector-icons'; 
+
+const Header = ({title, navigation}) => {
 
   return (
     <View style={styles.headerContainer}>
-        {homeButt ? <Button title='x' onPress={setCarSelectedTo0}/> : ''}
-        
         <Text style={styles.headerTitle}>{title}</Text>
+        <TouchableOpacity onPress={navigation.goBack}>
+          <AntDesign name="caretleft" size={24} color="white" />
+        </TouchableOpacity>
     </View>
   )
 }
