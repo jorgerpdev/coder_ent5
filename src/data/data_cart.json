@@ -1,0 +1,4 @@
+[
+    {"id":6, "title": "Chevrolet - Express 2500", "price":"6500000","quantity":"1","car_make":"Chevrolet","car_model":"Express 2500","car_year":2004,"estado":true, "thumbnail": "https://www.cars.com/i/large/in/v2/stock_photos/6182f50c-3aae-498b-8701-99f270eaf804/9e283d4f-6077-49d6-89a6-35c44d6c8cf5.png"},
+    {"id":7, "title": "Kia - Sportage","price":"7000000","quantity":"1","car_make":"Kia","car_model":"Sportage","car_year":2012,"estado":true, "thumbnail": "https://autolab.com.co/wp-content/uploads/2022/04/sportge.png"}
+]

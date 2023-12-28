@@ -1,17 +1,18 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import { useState, useEffect } from 'react'
-import AutosDisp from '../data/AutosDisp.json'
 import Card from '../components/Card'
-//import Header from '../components/Header'
 import {colors} from '../global/colors.js'
+import { useSelector } from 'react-redux'
 
-const CarDetailScreen = ({navigation, route, setCarSelectedTo0}) => { //carId
+const CarDetailScreen = ({}) => { //carId
     const [carDetail, setCarDetail] = useState({})
 
-    var carId = route.params;
+    //var carId = route.params;
+    var carId = useSelector(state => state.shopReducer.idMovilSelected)
+    const Moviles = useSelector(state => state.shopReducer.Moviles_data)
 
     useEffect(() =>{
-        const carItem = AutosDisp.find((car) => car.id === carId)
+        const carItem = Moviles.find((car) => car.id === carId)
         setCarDetail(carItem)
     },[carId])    
 

@@ -9,9 +9,8 @@ import CarsScreen from '../screens/CarsScreen'
 const Stack = createNativeStackNavigator()
 
 
-const Navigator = () => {
+const ShopNavigator = () => {
   return (
-    <NavigationContainer>
         <Stack.Navigator
             screenOptions={
                 ({navigation, route}) => ({
@@ -29,10 +28,9 @@ const Navigator = () => {
                 component={CarDetailScreen}
             />
         </Stack.Navigator>
-    </NavigationContainer>
   )
 }
 
-export default Navigator
+export default ShopNavigator
 
 const styles = StyleSheet.create({})
