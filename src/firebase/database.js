@@ -1,0 +1,1 @@
+export const base_url = 'https://coderhouse-app-99b64-default-rtdb.firebaseio.com/';

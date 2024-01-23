@@ -3,29 +3,38 @@ import Card from '../components/Card'
 import { colors } from '../global/colors';
 import React from 'react'
 import { FontAwesome } from '@expo/vector-icons'; 
+import { removeItem } from '../features/cartSlice';
+import { useDispatch } from 'react-redux';
 
 
 const CartItem = ({item}) => {
-  return (
-    <Card style={styles.cartItemContainer}>
-        <Image
-            style={styles.imageCartItem}
-            resizeMode='cover'
-            source={{uri:item.thumbnail}}
-        />
-        <View>
-            <Text style={styles.cartTitle}>{item.title}</Text>
-            <Text style={styles.cartLightText}>{item.car_make}</Text>
-            <Text style={styles.cartLightText}>${item.price}</Text>
-            <Text style={styles.cartTotalPrice}>
-                Cantidad: {item.quantity}, Total: ${item.price*item.quantity}
-            </Text>
-        </View>
-        <TouchableOpacity style={styles.trashCart} onPress={null}>
-            <FontAwesome name="trash" size={24} color="black" />
-        </TouchableOpacity>
-    </Card>
-  )
+
+    const dispatch = useDispatch();
+
+    const onRemoveFromCart = () =>{
+        dispatch(removeItem({...item}))
+    }
+
+    return (
+        <Card style={styles.cartItemContainer}>
+            <Image
+                style={styles.imageCartItem}
+                resizeMode='cover'
+                source={{uri:item.thumbnail}}
+            />
+            <View>
+                <Text style={styles.cartTitle}>{item.title}</Text>
+                <Text style={styles.cartLightText}>{item.car_make}</Text>
+                <Text style={styles.cartLightText}>${item.price}</Text>
+                <Text style={styles.cartTotalPrice}>
+                    Cantidad: {item.quantity}, Total: ${item.price*item.quantity}
+                </Text>
+            </View>
+            <TouchableOpacity style={styles.trashCart} onPress={onRemoveFromCart}>
+                <FontAwesome name="trash" size={24} color="black" />
+            </TouchableOpacity>
+        </Card>
+    )
 }
 
 export default CartItem
