@@ -2,11 +2,12 @@ import { StyleSheet, Text, View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { NavigationContainer } from '@react-navigation/native'
 import { Entypo } from '@expo/vector-icons'; 
-import { FontAwesome5 } from '@expo/vector-icons';
+import { FontAwesome5, FontAwesome } from '@expo/vector-icons';
 import { colors } from '../global/colors'
 
 import ShopNavigator from './ShopNavigator'
 import CartNavigator from './CartNavigator'
+import ProfileNavigator from './ProfileNavigator';
 
 const Tab = createBottomTabNavigator();
 
@@ -36,6 +37,15 @@ const TabNavigator = () => {
                 options={{
                     tabBarIcon: ({focused}) => (
                         <FontAwesome5 name="shopping-cart" size={24} color={focused?"#fff":"#ccc"}  />
+                    )
+                }}
+                />
+                <Tab.Screen 
+                name="ProfileStack" 
+                component={ProfileNavigator}
+                options={{
+                    tabBarIcon: ({focused}) => (
+                        <FontAwesome name="user-o" size={24} color={focused?"#fff":"#ccc"}  />
                     )
                 }}
                 />
